@@ -23,13 +23,17 @@
   <link rel="stylesheet" href="/css/style.css" type="text/css">
   
 <script type="text/javascript">
+var hostname = window.location.hostname;
 var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?6d92c3181859ace171544684ac094ac1";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
+
+if(!(hostname == "localhost" || hostname == "127.0.0.1")) {
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "//hm.baidu.com/hm.js?6d92c3181859ace171544684ac094ac1";
+		var s = document.getElementsByTagName("script")[0]; 
+		s.parentNode.insertBefore(hm, s);
+	})();	
+}
 </script>
 
 </head>
